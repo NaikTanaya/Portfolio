@@ -116,6 +116,16 @@ span.navbar-text {
     display: flex;
     align-items: center;
 }
+@media (max-width: 768px) {
+  nav.navbar {
+    position: relative; /* Change position to relative for mobile */
+  }
+
+  nav.navbar.scrolled {
+    backdrop-filter: blur(25px); /* Adjust blur for mobile */
+    background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background for mobile */
+  }
+}
 .social-icon {
     display: inline-block;
     margin-left: 14px;
@@ -976,7 +986,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-/* experience mobile  */
+/* navbar mobile  */
 
 
 
