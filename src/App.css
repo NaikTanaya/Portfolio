@@ -118,9 +118,13 @@ span.navbar-text {
 }
 @media (max-width: 768px) {
   nav.navbar {
-    position: relative; /* Change position to relative for mobile */
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition: 0.32s ease-in-out;
   }
-
   nav.navbar.scrolled {
     backdrop-filter: blur(25px); /* Adjust blur for mobile */
     background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background for mobile */
