@@ -22,8 +22,8 @@ export const Newsletter = () => {
       <div className="newsletter-bx wow slideInUp" id="newsletter"
       style={{
         background: 'linear-gradient(45deg, #3498db, #2ecc71)', // Example linear gradient background
-        color: '#fff',
-        padding: '60px',
+        // color: '#fff',
+        padding: '40px',
         // borderRadius: '10px',
         position: 'relative', // Add position relative for absolute positioning of hover overlay
         overflow: 'hidden', // Hide overflow for the hover overlay
@@ -39,9 +39,10 @@ export const Newsletter = () => {
             <div className="new-email-bx d-flex justify-content-center">
               
             <h3 style={{
-              background: 'linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%)',
+              // background: 'linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%)',
+              
               WebkitBackgroundClip: 'text',
-              color: 'transparent',
+            
               textFillColor: 'transparent',
               padding: '15px',
             }}>Click to view my Resume </h3>  &nbsp; &nbsp;

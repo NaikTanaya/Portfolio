@@ -305,44 +305,96 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
+
+/* General styling for skills */
 .skill {
-  padding: 0 0 50px 0;
+  padding: 50px 0; /* Adjust padding for top and bottom */
   position: relative;
 }
+
 .skill-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 60px 20px; /* Adjust padding for top and bottom, reduce left and right padding on mobile */
   margin-top: -60px;
 }
+
 .skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
 }
+
 .skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 40px 0; /* Adjust margin for better spacing on mobile */
 }
+
 .skill-slider {
-  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns for desktop */
+  gap: 2.5rem;
+  width: 100%; /* Make the slider full width on smaller screens */
   margin: 0 auto;
   position: relative;
 }
+
+.skill-slider .item {
+  padding: 1.3rem;
+  border-radius: 2rem;
+  border: 1px solid #854CE6;
+  box-shadow: 0 4px 24px rgba(23, 92, 230, 0.15);
+  transition: var(--transition);
+}
+
+.skill-slider .item:hover {
+  border-color: var(--color-primary-variant);
+  box-shadow: 0 0 20px 10px rgba(25, 85, 150, 0.7);
+  background: transparent;
+  transform: scale(1.02);
+  overflow: hidden;
+  transition: all 0.5s ease 0s ;
+}
+
 .skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 35%;
 }
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+
+.skill-slider .item h3 {
+  margin: 2rem 0;
 }
+
+.skill-slider .item p {
+  margin: 0 0 1.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for tablets and mobile devices) */
+@media (max-width: 768px) {
+  .skill-bx {
+    padding: 40px 15px; /* Adjust padding for top and bottom, reduce left and right padding on mobile */
+    border-radius: 24px; /* Reduce border-radius for a more rounded appearance on mobile */
+  }
+
+  .skill h2 {
+    font-size: 30px; /* Adjust font size for headings on mobile */
+  }
+
+  .skill p {
+    font-size: 16px; /* Adjust font size for paragraphs on mobile */
+  }
+
+  /* Adjust the number of columns for mobile */
+  .skill-slider {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 
 /************ Projects Css ************/
 .project {
@@ -566,7 +618,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.2em;
 }
 .new-email-bx {
-  background: #fff;
+  background: 'transparent';
   padding: 5px;
   border-radius: 20px;
   position: relative;
@@ -574,7 +626,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
-.new-email-bx::before {
+/* .new-email-bx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   border-radius: 20px;
@@ -595,7 +647,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   bottom: 0;
   right: 0;
-}
+} */
 .new-email-bx input {
   width: 100%;
   color: #121212;
@@ -696,10 +748,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 @media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    gap: 24px; /* Increase the gap between skills for better readability */
+  }
+
   .skills {
     max-width: 100%;
   }
-} 
+
+  .skills-item {
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+
+  .skills-list {
+    gap: 16px; /* Increase the gap between skills items for better readability */
+  }
+}
 
 
 
@@ -830,7 +896,87 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
+/* experience  */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
 
+.project h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.experience-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 49vh; */
+}
+
+.rectangle {
+  width: 600px;
+  height: 300px;
+  background-color: transparent;
+  border: 2px solid #3498db;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.logoImg {
+  width: 170px;
+  height: 150px;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.work {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.work h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.work p {
+  font-size: 16px;
+  color: #C0C0C0;
+  margin-bottom: 5px;
+}
+
+.work ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work ul li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 770px) {
+  .rectangle {
+    width: 93%;
+    height: auto;
+  }
+
+  .logoImg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* experience mobile  */
 
 
 
