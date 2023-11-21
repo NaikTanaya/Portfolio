@@ -80,10 +80,7 @@ export const Skills = () => {
                         <img src={css} className="skills-image" />
                         CSS
                       </div>
-                      <div className="skills-item">
-                        <img src={php} className="skills-image" />
-                        PHP
-                      </div>
+
                       <div className="skills-item">
                         <img src={react} className="skills-image" />
                         React Js
